@@ -9,7 +9,8 @@ To start, i'd like to mention that my
 preferred nickname is "Vincent" which is my
 middle name. As for a photo, i will attach my
 most recent selfie haha.
-![selfie (1)](https://user-images.githubusercontent.com/112654976/188340001-dc363ef2-4b0c-4124-9b60-84cfd875e84b.jpg)
+![selfie (2)](https://user-images.githubusercontent.com/112654976/188340149-312f84f2-a847-48d0-8762-173a94cd7d43.jpg)
+
 
 Now to answer your questions..
 
