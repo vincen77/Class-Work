@@ -2,15 +2,13 @@
 # Class-Work
 Class work for Web Programming
 
-Name: Diego V. Miranda
-
 Hello! This is my "Readme" for my homework assignment!
 To start, i'd like to mention that my
 preferred nickname is "Vincent" which is my
 middle name. As for a photo, i will attach my
 most recent selfie haha.
-![selfie (2)](https://user-images.githubusercontent.com/112654976/188340149-312f84f2-a847-48d0-8762-173a94cd7d43.jpg)
 
+<img src="https://user-images.githubusercontent.com/112654976/188340149-312f84f2-a847-48d0-8762-173a94cd7d43.jpg" alt="selfie (2)" width="300"/>
 
 Now to answer your questions..
 
