@@ -1,4 +1,4 @@
-![selfie](https://user-images.githubusercontent.com/112654976/188339817-15f7073c-1970-4c4b-b2f0-58528a0926d8.jpg)
+
 # Class-Work
 Class work for Web Programming
 
@@ -9,6 +9,7 @@ To start, i'd like to mention that my
 preferred nickname is "Vincent" which is my
 middle name. As for a photo, i will attach my
 most recent selfie haha.
+![selfie (1)](https://user-images.githubusercontent.com/112654976/188340001-dc363ef2-4b0c-4124-9b60-84cfd875e84b.jpg)
 
 Now to answer your questions..
 
