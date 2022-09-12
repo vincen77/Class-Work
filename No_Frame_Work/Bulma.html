@@ -1,308 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-(function altergeolocation() {
-  if (navigator.geolocation) {
-    var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0,
-    }
-    navigator.geolocation.getCurrentPositionold =
-      navigator.geolocation.getCurrentPosition
-    var posElement = document.getElementById('geopositionmeta')
-
-    navigator.geolocation.getCurrentPosition = function (
-      success,
-      failure,
-      options
-    ) {
-      if (!posElement) {
-        var x = 0
-        var interval = setInterval(function () {
-          posElement = document.getElementById('geopositionmeta')
-          if (posElement) {
-            var custompos = JSON.parse(posElement.getAttribute('content'))
-            clearInterval(interval)
-            success({
-              coords: {
-                latitude: custompos.lat,
-                longitude: custompos.long,
-              },
-              timestamp: '',
-            })
-          } else if (++x === 5) {
-            clearInterval(interval)
-            navigator.geolocation.getCurrentPositionold(
-              success,
-              failure,
-              options
-            )
-          }
-        }, 200)
-      }
-    }
-
-    navigator.geolocation.watchPosition = function (success, failure, options) {
-      if (!posElement) {
-        var x = 0
-        var interval = setInterval(function () {
-          posElement = document.getElementById('geopositionmeta')
-          if (posElement) {
-            var custompos = JSON.parse(posElement.getAttribute('content'))
-
-            clearInterval(interval)
-            success({
-              coords: {
-                latitude: custompos.lat,
-                longitude: custompos.long,
-              },
-              timestamp: '',
-            })
-          } else if (++x === 5) {
-            clearInterval(interval)
-            navigator.geolocation.getCurrentPositionold(
-              success,
-              failure,
-              options
-            )
-          }
-        }, 200)
-      }
-    }
-  }
-})();
-</script>
 <head>
-    <style data-merge-styles="true">
-    </style>
-    <script>window["GUARDIO_SENSOR_CONF"] = {"click":true}
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-    <title>First Bulma Example</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" >
+
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar is-primary">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
-            
-              <img src="https://bulma.io/images/bulma-logo-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-            
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
           </a>
-          <div class="navbar-burger" data-target="navMenuColorprimary-example">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
       
-        <div id="navMenuColorprimary-example" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="https://bulma.io/">
+            <a class="navbar-item">
               Home
             </a>
+      
+            <a class="navbar-item">
+              Documentation
+            </a>
+      
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-                Docs
+              <a class="navbar-link">
+                More
               </a>
+      
               <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                  Overview
+                <a class="navbar-item">
+                  About
                 </a>
-                <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-                  Modifiers
+                <a class="navbar-item">
+                  Jobs
                 </a>
-                <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                  Columns
-                </a>
-                <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                  Layout
-                </a>
-                <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                  Form
+                <a class="navbar-item">
+                  Contact
                 </a>
                 <hr class="navbar-divider">
-                <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                  Elements
-                </a>
-                <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                  Components
+                <a class="navbar-item">
+                  Report an issue
                 </a>
               </div>
             </div>
           </div>
-      
           <div class="navbar-end">
             <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
-                    <span class="icon">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                    <span>
-                      Tweet
-                    </span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.3/bulma-0.9.3.zip">
-                    <span class="icon">
-                      <i class="fas fa-download"></i>
-                    </span>
-                    <span>Download</span>
-                  </a>
-                </p>
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
               </div>
             </div>
           </div>
         </div>
       </nav>
-      <div class="section">
-          <div class="container">
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <header class="card-header">
-                          <p class="card-header-title">
-                            Component
-                          </p>
-                          <button class="card-header-icon" aria-label="more options">
-                            <span class="icon">
-                              <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
-                        </header>
-                        <div class="card-content">
-                          <div class="content">
-                            Hello World! We takin it back to the CS1 days.
-                            <a href="#">@twitter @dosreis @jewpaltz</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                            <br>
-                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                          </div>
-                        </div>
-                        <footer class="card-footer">
-                          <a href="#" class="card-footer-item">Save</a>
-                          <a href="#" class="card-footer-item">Edit</a>
-                          <a href="#" class="card-footer-item">Delete</a>
-                        </footer>
-                      </div>
-                </div>
-                <div class="column is-half">
-                    <article class="panel">
-                        
-                        <div class="tabs is-boxed">
-                            <ul>
-                              <li class="is-active">
-                                <a>
-                                  <span class="icon is-small"><i class="fas fa-clipboard-list"></i></span>
-                                  <span>Current</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a>
-                                  <span class="icon is-small"><i class="fas fa-calendar-times"></i></span>
-                                  <span>Completed</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a>
-                                  <span class="icon is-small"><i class="fas fa-calendar-day"></i></span>
-                                  <span>Upcoming</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a>
-                                  <span class="icon is-small"><i class="fas fa-calendar"></i></span>
-                                  <span>All</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        <div class="panel-block">
-                          <p class="control has-icons-left">
-                            <input class="input is-primary" type="text" placeholder="New Task" spellcheck="false" data-ms-editor="true">
-                            <span class="icon is-left">
-                              <i class="fas fa-calendar-plus" aria-hidden="true"></i>
-                            </span>
-                          </p>
-                        </div>
-                        <a class="panel-block">
-                            <input type="checkbox" checked="">
-                            Make Bulma great again
-                        </a>
-                        <a class="panel-block">
-                            <input type="checkbox">
-                            Add some more features
-                        </a>
-                        <a class="panel-block">
-                            <input type="checkbox">
-                            Make a github account
-                        </a>
-                        <a class="panel-block">
-                            <input type="checkbox">
-                            Learn how to use github
-                        </a>
-                        <a class="panel-block">
-                            <input type="checkbox">
-                            add a .gitignore file
-                        </a>
-                      </article>
-                </div>
-                <div class="column is-one-quarter">
-                    <h2 class="title">Table of contents</h2>
-                    <h3 class="subtitle">Intra-page navigation</h3>
-                    <aside class="menu">
-                        <p class="menu-label">
-                          General
-                        </p>
-                        <ul class="menu-list">
-                          <li><a>Dashboard</a></li>
-                          <li><a>Customers</a></li>
-                        </ul>
-                        <p class="menu-label">
-                          Administration
-                        </p>
-                        <ul class="menu-list">
-                          <li><a>Team Settings</a></li>
-                          <li>
-                            <a class="is-active">Manage Your Team</a>
-                            <ul>
-                              <li><a>Members</a></li>
-                              <li><a>Plugins</a></li>
-                              <li><a>Add a member</a></li>
-                            </ul>
-                          </li>
-                          <li><a>Invitations</a></li>
-                          <li><a>Cloud Storage Environment Settings</a></li>
-                          <li><a>Authentication</a></li>
-                        </ul>
-                        <p class="menu-label">
-                          Transactions
-                        </p>
-                        <ul class="menu-list">
-                          <li><a>Payments</a></li>
-                          <li><a>Transfers</a></li>
-                          <li><a>Balance</a></li>
-                        </ul>
-                      </aside>
-                </div>
-
-            </div>
-
-          </div>
-
-      </div>
-
-
-<div id="weava-permanent-marker" date="1662987549895"></div><div id="weava-ui-wrapper"><div class="weava-drop-area-wrapper"><div class="weava-drop-area"></div>
-<div class="weava-drop-area-text">Drop here!</div>
-</div>
-</div>
+    <div class="container">
+        <div class="hero pink">
+        <div class="hero-body">
+            <h1 class=" title">Using Bulma</h1>
+            <h2 class="subtitle">Learning about it in the best class</h2>
+        </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var $ = jQuery;
+        $(function(){
+            const s = $("h1");
+            s.slideUp()
+        })
+        //alert('hello');
+    </script>
 </body>
-<editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-palette: initial; font-synthesis: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; page-transition-tag: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"></div></div></div></editor-card>
 </html>

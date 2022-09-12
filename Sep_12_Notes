@@ -1,0 +1,26 @@
+pull makes changes if they weren't done in VSC.
+
+ctrl + ` for terminal
+
+make "git pull" in terminal a habit
+
+using alerts on a website is fairly ameaturish 
+
+percieved load time is of extreme importance.
+
+javascript should always be at the bottom.
+
+CSS belongs in head, java belongs at bottom.
+
+"jQuerY.com" very important and revolutionary
+
+.min minimizes all functions and code so that it can load quicker. 
+(anything that is local)
+((minified javascript))
+
+when ruining jquery inside function, want to do
+<script>
+    $(function(){
+
+    })
+</script>
