@@ -1,0 +1,19 @@
+Use const as much as possible
+
+try to make it a const, if not make it a let, and if not let, make it a var (variable)
+
+never use magic number or string
+    -actual number or constant but the computer is meant to understand it.
+
+127.0.0.1 is loop back/local host
+
+port definition
+
+fat-arrow function
+    -function gets stored in variable especially in js
+    "lambda"
+    -you don't need to have squiglies 
+    -don't have to write return
+    -never has it's own ".this"
+
+creating a server is creating an object that recieves text messages
