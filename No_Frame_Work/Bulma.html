@@ -73,26 +73,58 @@
         </div>
       </nav>
     <div class="container">
+      
         <div class="hero pink">
         <div class="hero-body">
             <h1 class=" title">Using Bulma</h1>
             <h2 class="subtitle">Learning about it in the best class</h2>
         </div>
-        <div class="notification is-danger is-light">
-          <button class="delete"></button>
-          Deployed
         </div>
+
+        <div v-for="m in messages" class="notification is-success is-light" v-show="m.isVisible">
+          <button class="delete" @click="m.isVisible = false" ></button>
+          {{ m.text }} 
+        </div>
+
         <div></div>
         <div></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var $ = jQuery;
-        $(function(){
-            const s = $("h1");
-            s.slideUp()
-        })
-        //alert('hello');
+
+    <script type="module">
+      import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    isNotificationVisible: true,
+                    isMenuOpen: false,
+                    messages: [
+                    { text: "This class is awesome", isVisible: true },
+                    { text: "Happy New Year", isVisible: true },
+                    { text: "Rosh hHashanah", isVisible: true },
+                    { text: "Vue is awesome", isVisible: true },
+                    ]
+                }
+            },
+            methods: {
+                hideNotification(){
+                    this.isNotificationVisible = false;
+                }
+            }
+        }).mount('body');
+
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
+
+<!-- <script>
+  var $ = jQuery;
+  $(function(){
+      const s = $("h1");
+      s.slideUp()
+  })
+  //alert('hello');
+</script> -->
