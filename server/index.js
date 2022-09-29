@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
     //'Server running at http://${hostname}:${port}/' is a dynamic string
     //console.log('Server still running at http://' + hostname + ':' + port + '/');
