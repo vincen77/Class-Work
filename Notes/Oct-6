@@ -1,0 +1,4 @@
+Always do cd (folder) 
+then npm i (install)
+    this gets packages that may have not been installed on your computer/folder
+npm run dev to get application
