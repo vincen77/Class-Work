@@ -1,0 +1,15 @@
+index.ts file imports 2 function from router package
+
+imports home view
+
+creates router and exports results of createrouter.
+
+history and routes are 2 very important functions
+    history tells router what to view
+
+objects are squiggly brackets
+
+arrays are square brackets
+
+if you don't export in code, won't be available to anyone else
+
