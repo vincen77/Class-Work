@@ -1,0 +1,19 @@
+vue model is any data that you need to model the state of a particular compenent
+
+products are something we get from getproducts
+
+search variable is something that's stores locally
+
+wrapped in computed so the template get's notified of change
+    -loops through results
+
+backticks are making the string
+    -/product/${product.id}`"
+
+    bouncing back between javascript and typescript
+
+cannot set reactive to a function
+
+using a functional paridim so we can set results to whatever results is 
+
+make results a reactive

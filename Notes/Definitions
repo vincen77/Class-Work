@@ -1,0 +1,57 @@
+Object:
+    -In between, each object is made into a generic class of object, and even more generic classes are defined so that objects can share models and reuse the class definitions in their code. Each object is an instance of a particular class or subclass with the class's own methods or procedures and data variables. An object is what actually runs in the computer.
+    
+Characteristics of an object
+    All individual objects possess three basic characteristics -- identity, state and behavior. Understanding these characteristics is crucial to knowing how objects and object-oriented logic work.
+
+    Identity means that each object has its own object identifier and can be differentiated from all other objects. Each object's name, or identity, is unique and distinct from other objects.
+    State refers to the properties of an object. For example, values of variables in the object contain data that can be added, changed or deleted.
+    Behavior refers to actions that the object can take. For example, one object can respond to another object to carry out software functions.
+    Some of the things in programming that can be defined as objects include the following:
+
+    variables, which hold values that can be changed;
+    data structures, which are specialized formats used to organize and process data;
+    functions, which are named procedures that perform a defined task; and
+    methods, which are programmed procedures that are defined as components of a parent class and are included in any instance of that class.
+    Objects can do things and can have things done to them. For example, a function or method object can be programmed to modify the contents of a data structure or variable object.
+
+Variable:
+    -In programming, a variable is a value that can change, depending on conditions or on information passed to the program. Typically, a program consists of instruction s that tell the computer what to do and data that the program uses when it is running. The data consists of constants or fixed values that never change and variable values (which are usually initialized to "0" or some default value because the actual values will be supplied by a program's user). Usually, both constants and variables are defined as certain data type s. Each data type prescribes and limits the form of the data. Examples of data types include: an integer expressed as a decimal number, or a string of text characters, usually limited in length.
+
+    In object-oriented programming , each object contains the data variables of the class it is an instance of. The object's method s are designed to handle the actual values that are supplied to the object when the object is being used.
+
+Class:
+    -In object-oriented programming , a class is a template definition of the method s and variable s in a particular kind of object . Thus, an object is a specific instance of a class; it contains real values instead of variables.
+
+    The class is one of the defining ideas of object-oriented programming. Among the important ideas about classes are:
+
+    A class can have subclasses that can inherit all or some of the characteristics of the class. In relation to each subclass, the class becomes the superclass.
+    Subclasses can also define their own methods and variables that are not part of their superclass.
+    The structure of a class and its subclasses is called the class hierarchy.
+
+API:
+    -API stands for application programming interface, which is a set of definitions and protocols for building and integrating application software.
+
+    How do APIs work?
+    APIs let your product or service communicate with other products and services without having to know how they’re implemented. This can simplify app development, saving time and money. When you’re designing new tools and products—or managing existing ones—APIs give you flexibility; simplify design, administration, and use; and provide opportunities for innovation.
+
+    APIs are sometimes thought of as contracts, with documentation that represents an agreement between parties: If party 1 sends a remote request structured a particular way, this is how party 2’s software will respond.
+
+    Because APIs simplify how developers integrate new application components into an existing architecture, they help business and IT teams collaborate. Business needs often change quickly in response to ever shifting digital markets, where new competitors can change a whole industry with a new app. In order to stay competitive, it's important to support the rapid development and deployment of innovative services. Cloud-native application development is an identifiable way to increase development speed, and it relies on connecting a microservices application architecture through APIs.
+
+    APIs are a simplified way to connect your own infrastructure through cloud-native app development, but they also allow you to share your data with customers and other external users. Public APIs represent unique business value because they can simplify and expand how you connect with your partners, as well as potentially monetize your data (the Google Maps API is a popular example).
+
+    Chart of how APIs work: Backend systems connect to APIs, which connect to an API management system, which connect to Apps, IoT devices and mobile.
+
+
+    For example, imagine a book-distributing company. The book distributor could give its customers a cloud app that lets bookstore clerks check book availability with the distributor. This app could be expensive to develop, limited by platform, and require long development times and ongoing maintenance.
+
+    Alternatively, the book distributor could provide an API to check stock availability. There are several benefits to this approach:
+
+    Letting customers access data via an API helps them aggregate information about their inventory in a single place.
+
+    The book distributor can make changes to its internal systems without impacting customers, so long as the behavior of the API doesn’t change.
+
+    With a publicly available API, developers working for the book distributor, book sellers or third parties could develop an app to help customers find the books they’re looking for. This could result in higher sales or other business opportunities.
+
+    In short, APIs let you open up access to your resources while maintaining security and control. How you open access and to whom is up to you. API security is all about good API management, which includes the use of an API gateway. Connecting to APIs, and creating applications that consume the data or functionality exposed by APIs, can be done with a distributed integration platform that connects everything—including legacy systems, and the Internet of Things (IoT).

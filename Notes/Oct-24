@@ -1,0 +1,23 @@
+terminal:
+-always do git pull
+- npm i
+-npm run dev
+-dummyjson
+    - for client side
+
+ctrl + shift + p = drop down menu
+
+getProducts will return data
+
+find function will give you very first item that satisfies the function
+
+display: flex; - things will show up next to each other
+
+10em - height of an m at current font
+
+route:
+
+ref has a variable that has a value which you have to access
+
+reactive variable: whenever product or search change, it will automatically notify results and it will propogate  out
+
