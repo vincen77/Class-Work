@@ -1,0 +1,7 @@
+Mongo
+    -network access is firewall
+
+to access server, do "npm run dev" inside class-work folder. And to launch app, do "npm run dev" inside client 
+
+crtl + space gives help in vscode
+    (in package.json, in dependencies) send http message using fetch to npmjs.org, get back list of up to date npm packages

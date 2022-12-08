@@ -1,0 +1,27 @@
+node.js is backend
+vue is frontend
+
+next 13
+
+
+want bulma and font awesome in dev dependencies
+
+want sass
+
+crtl c on next app
+    npm i
+        npm run dev
+        
+(Next.js)
+we installed bulma but never imported it
+    next.js has built in routing
+        takes the page in files folder, and uses that to build router
+            app.tsx is very similar to our app.vue (similar idea)
+            index.tsx is similar in concept to our views/homeview.
+
+    import bulma in 
+
+const NavVue = ()=> <div></div> (this is how you make a component)
+                ^ this is a function
+        
+nav.tsx

@@ -1,0 +1,9 @@
+.env file in server side
+    -want to get MONGO_URi from mongo file in server, and port from server "127.0.0.1:3003"
+                                ^
+
+
+.env file in client side
+    -get API_ROOT from myFetch
+    "VITE_API_ROOT"
+    -also add google cloud api into both .env files
