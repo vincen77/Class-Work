@@ -1,0 +1,15 @@
+Questions:
+    How to install next.js
+
+    what should be within my stores 
+        have user.ts (which should be similar to products i imagine) so what would cart.ts be? 
+            would it be userdatabase? or is that something in regards to admin
+            or would it be userposts that we are saving to the server as data
+
+    issues in regards to alert fetch in class-work
+
+    make sure that render is building for class work
+
+!!! understand how to make seperate branch for class-work repo (so i can see how vue and node work without next.js) !!!
+
+in order to run node, we need a webservice 

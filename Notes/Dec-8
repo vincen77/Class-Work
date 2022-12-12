@@ -24,4 +24,4 @@ we installed bulma but never imported it
 const NavVue = ()=> <div></div> (this is how you make a component)
                 ^ this is a function
         
-nav.tsx
+nav.tsx       
